@@ -43,7 +43,7 @@ export default {
 
      async function SearchMovies(){
         if (search.value != "" && env.apiKey != "") {
-       const resopnse=await fetch(`http://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`);
+       const resopnse=await fetch(`https://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`);
        const data =await resopnse.json();
         movies.value = data.Search;
         search.value = "";
