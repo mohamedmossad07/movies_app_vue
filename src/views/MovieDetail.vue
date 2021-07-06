@@ -19,7 +19,7 @@ export default {
 
     async function fet() {
       const response = await fetch(
-        `http://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
+        `https://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
       );
       const movies = await response.json();
       movie.value = movies;
